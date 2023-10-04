@@ -1,0 +1,120 @@
+:root {
+	--color-primary-text: #f0f0f4;
+	--color-primary-text-muted: hsl(240, 15%, 82%);
+	--color-1: #f72585;
+	--color-2: #8439f6;
+	--color-3: #3a0ca3;
+	--color-4: #4361ee;
+	--color-5: #00ffff;
+}
+
+html,
+body {
+	height: 100vh;
+	width: 100vw;
+	margin: 0;
+}
+
+#container {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	min-width: 100%;
+	font-family: "Work Sans";
+	background: linear-gradient(var(--color-3) 40%, var(--color-4) 100%);
+}
+
+#wrapper {
+	display: contents;
+}
+
+#header-row {
+	background-color: var(--color-5);
+	text-align: center;
+	padding: 1.25rem 0;
+}
+
+#content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex: 1 1 auto;
+	padding: 4rem 0;
+}
+
+#title-row {
+	text-align: center;
+}
+
+#instructions-row {
+	display: flex;
+	justify-content: center;
+	margin: 1.5rem 0;
+}
+
+#instructions-title {
+	color: var(--color-5);
+	display: inline;
+	font-size: clamp(1.5rem, 10vw, 1.75rem);
+}
+
+.instructions-number {
+	color: var(--color-5);
+	font-size: clamp(1.5rem, 10vw, 1.75rem);
+	text-align: center;
+	padding-right: 1rem;
+}
+
+.instructions-text {
+	color: var(--color-primary-text);
+	padding: 0.5rem;
+	font-size: 1rem;
+}
+
+#door-row {
+	display: flex;
+	flex-wrap: nowrap;
+	text-align: center;
+	margin: 2.5rem 0;
+}
+
+.door-frame {
+	cursor: pointer;
+	width: clamp(5rem, 20vw, 15rem);
+	max-height: 75vh;
+	padding: 0 0.5rem;
+	text-align: center;
+}
+
+#start {
+	background-color: var(--color-5);
+	color: var(--color-3);
+	font-size: clamp(1rem, 10vw, 1.5rem);
+	text-align: center;
+	width: fit-content;
+	border: none;
+	border-radius: 0.5rem;
+	padding: 1.25rem 1.75rem;
+	margin: 1.5rem auto 0 auto;
+	cursor: pointer;
+}
+
+#start:hover {
+	outline-style: solid;
+	outline-color: #3a0ca3;
+	outline-offset: 0.2rem;
+	outline-width: 0.2rem;
+}
+
+#footer-row {
+	color: var(--color-primary-text-muted);
+	background-color: var(--color-4);
+	padding: 1.75rem;
+}
+
+@media (max-width: 400px) {
+	#content {
+		background-color: #f72585;
+	}
+}
