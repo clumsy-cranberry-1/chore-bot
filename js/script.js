@@ -14,11 +14,15 @@ let startButton = document.querySelector("#start");
 let gameStatus;
 let numClosedDoors = 3;
 let currentlyPlaying = true;
-let currentStreak = 0;
-let bestStreak = 0;
 
-/* @function randomChoreDoorGenetator
-** Randomly generates the door that hides the ChoreBot */
+let bestScore = 0;
+let bestScoreEl = document.querySelectorAll('.score-total')[0];
+let currentScore = 0;
+let currentScoreEl = document.querySelectorAll('.score-total')[1];
+
+/**
+ * Randomly generates the door that hides the ChoreBot
+ */
 const randomChoreDoorGenerator = () => {
   let choreDoor = Math.floor(Math.random() * numClosedDoors);
   switch (choreDoor) {
@@ -39,18 +43,35 @@ const randomChoreDoorGenerator = () => {
   }
 };
 
+/**
+ * 
+ * @param {string} gameStatus
+ * Updates the button's text to a relevant message based on whether the player had won or lost the game
+ * Updates the scores for best score and current score
+ */
 const gameOver = (gameStatus) => {
   if (gameStatus === "win") {
-    startButton.innerHTML = "You win! Play again?";
+    startButton.textContent = "You win! Play again?";
+    currentScore++;
+    currentScoreEl.textContent = currentScore;
+    if (currentScore > bestScore) {
+      bestScore = currentScore;
+      bestScoreEl.textContent = bestScore;
+    }
   }
   if (gameStatus === "lose") {
-    startButton.innerHTML = "Game over! Play again?";
+    startButton.textContent = "Game over! Play again?";
     startButton.style.backgroundColor = "var(--color-1)";
+    currentScore = 0;
+    currentScoreEl.textContent = currentScore;
   }
 };
 
-/* @function isClicked
-** logic to make each door clickable only once */
+/**
+ * The function checks if a door had been clicked (opened)
+ * @param {string} door 
+ * @returns a boolean value
+ */
 const isClicked = (door) => {
   if (door.src === closedDoorPath) {
     return false;
@@ -59,6 +80,11 @@ const isClicked = (door) => {
   }
 };
 
+/**
+ * The function checks if the opened door is the ChoreBot
+ * @param {string} door 
+ * @returns a boolean value
+ */
 const isBot = (door) => {
   if (door.src === botDoorPath) {
     return true;
@@ -67,21 +93,27 @@ const isBot = (door) => {
   }
 };
 
-/* @function playDoors:
-** Decreases the numClosedDoors variable. This is because each time you click a door, the number of available doors to click goes down by one.
-** It checks if the game-winning condition (numClosedDoors === 0) has been met and if so, calls a gameOver() function. */
+/**
+ * @param {string} door
+ * When a closed door is clicked:
+ * 1) The number of closed doors decreases (decreases the numClosedDoors variable). 
+ * 2) We check if a game over condition is met, ie., all doors have been successfully opened or the ChoreBot appeared before all doors could be opened.
+ */
 const playDoor = (door) => {
   numClosedDoors -= 1;
+  
   if (numClosedDoors === 0) {
     gameStatus = "win";
     gameOver(gameStatus);
     currentlyPlaying = false;
   }
+
   if (numClosedDoors > 0 && isBot(door)) {
     gameStatus = "lose";
     gameOver(gameStatus);
     currentlyPlaying = false;
   }
+
 };
 
 /**
@@ -90,11 +122,14 @@ const playDoor = (door) => {
  */
 const startRound = () => {
   currentlyPlaying = true;
+
   startButton.innerHTML = "Good Luck!";
   startButton.style.backgroundColor = "var(--color-5)";
+
   doorImage1.src = closedDoorPath;
   doorImage2.src = closedDoorPath;
   doorImage3.src = closedDoorPath;
+
   numClosedDoors = 3;
   randomChoreDoorGenerator();
 };

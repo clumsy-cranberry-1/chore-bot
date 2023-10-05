@@ -2,10 +2,11 @@
 <html>
 
 <head>
-    <title>Chore Door!</title>
+    <title>Chore Door</title>
     <link rel="stylesheet" href="./css/css_reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet" type="text/css">
+    <script defer src="./js/script.js"></script>
 </head>
 
 <body>
@@ -15,7 +16,7 @@
                 <img src="https://content.codecademy.com/projects/chore-door/images/logo.svg">
             </header>
 
-            <section id="content">
+            <main id="main-content">
                 <div id="title-row">
                     <img src="https://content.codecademy.com/projects/chore-door/images/star.svg">
                     <p id="instructions-title">Instructions</p>
@@ -26,7 +27,9 @@
                     <table id="instructions-table">
                         <tr>
                             <td class="instructions-number">1</td>
-                            <td class="instructions-text">Hiding behind one of these doors is the ChoreBot.</td>
+                            <td class="instructions-text">
+                                <p>Hiding behind one of these doors is the ChoreBot.</p>
+                            </td>
                         </tr>
                         <tr>
                             <td class="instructions-number">2</td>
@@ -58,15 +61,27 @@
                         src="https://content.codecademy.com/projects/chore-door/images/closed_door.svg">
                 </div>
 
-                <button id="start">Good Luck!</button>
-            </section>
+                <button id="start">Start</button>
+
+                <div id="score-row">
+                    <div>
+                        <p>Best Streak</p>
+                        <p class="score-total">0</p>
+                    </div>
+                    <div>
+                        <p>Current Streak</p>
+                        <p class="score-total">0</p>
+                    </div>
+                </div>
+            </main>
+
             <footer id="footer-row">
-                <p>This web app is based on a concept developed during a web development course and has been improved and enhanced with
-                additional features by Melissa V Herbst.</p>
+                <p>This web app is based on a concept developed during a web development course and has been improved
+                    and enhanced with
+                    additional features by Melissa V Herbst.</p>
             </footer>
         </div>
     </div>
-    <script src="./js/script.js"></script>
 </body>
 
 </html>

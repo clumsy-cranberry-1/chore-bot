@@ -16,15 +16,15 @@ body {
 }
 
 #container {
+	background: linear-gradient(var(--color-3) 40%, var(--color-4) 100%);
+	font-family: "Work Sans";
 	display: flex;
 	flex-direction: column;
 	min-height: 100%;
-	min-width: 100%;
-	font-family: "Work Sans";
-	background: linear-gradient(var(--color-3) 40%, var(--color-4) 100%);
+	min-width: 80%;
 }
 
-#wrapper {
+#container #wrapper {
 	display: contents;
 }
 
@@ -34,13 +34,13 @@ body {
 	padding: 1.25rem 0;
 }
 
-#content {
+#main-content {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	flex: 1 1 auto;
-	padding: 4rem 0;
+	padding: 4rem 2rem;
 }
 
 #title-row {
@@ -61,7 +61,7 @@ body {
 
 .instructions-number {
 	color: var(--color-5);
-	font-size: clamp(1.5rem, 10vw, 1.75rem);
+	font-size: 1.75rem;
 	text-align: center;
 	padding-right: 1rem;
 }
@@ -69,7 +69,8 @@ body {
 .instructions-text {
 	color: var(--color-primary-text);
 	padding: 0.5rem;
-	font-size: 1rem;
+	font-size: clamp(1rem, 10vw, 1.25rem);
+	text-wrap: nowrap;
 }
 
 #door-row {
@@ -81,7 +82,7 @@ body {
 
 .door-frame {
 	cursor: pointer;
-	width: clamp(5rem, 20vw, 15rem);
+	width: clamp(5rem, 22.5vw, 15rem);
 	max-height: 75vh;
 	padding: 0 0.5rem;
 	text-align: center;
@@ -96,7 +97,7 @@ body {
 	border: none;
 	border-radius: 0.5rem;
 	padding: 1.25rem 1.75rem;
-	margin: 1.5rem auto 0 auto;
+	margin: 1.5rem auto;
 	cursor: pointer;
 }
 
@@ -107,14 +108,33 @@ body {
 	outline-width: 0.2rem;
 }
 
+#score-row {
+	color: var(--color-primary-text);
+	font-size: clamp(1.25rem, 10vw, 1.5rem);
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	margin-top: 2.5rem;
+	width: 80%;
+}
+
+#score-row div {
+	background-color: #3a0ca335;
+	margin: 0 2.5rem;
+	padding: 1.5rem;
+	border-radius: 0.5rem;
+	text-wrap: nowrap;
+	min-width: 40%;
+	flex: 1 1;
+}
+
+#score-row p.score-total {
+	font-size: clamp(1.5rem, 10vw, 2rem);
+	color: var(--color-5);
+}
+
 #footer-row {
 	color: var(--color-primary-text-muted);
 	background-color: var(--color-4);
 	padding: 1.75rem;
-}
-
-@media (max-width: 400px) {
-	#content {
-		background-color: #f72585;
-	}
 }
