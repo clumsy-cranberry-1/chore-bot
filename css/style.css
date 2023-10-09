@@ -16,12 +16,12 @@ body {
 }
 
 #container {
-	background: linear-gradient(var(--color-3) 40%, var(--color-4) 100%);
+	background: linear-gradient(var(--color-3) 0%, var(--color-3) 30%, var(--color-4) 100%);
 	font-family: "Work Sans";
 	display: flex;
 	flex-direction: column;
 	min-height: 100%;
-	min-width: 80%;
+	min-width: 100%;
 }
 
 #container #wrapper {
@@ -50,40 +50,38 @@ body {
 #instructions-row {
 	display: flex;
 	justify-content: center;
-	margin: 1.5rem 0;
+	margin: 2rem 0 3.5rem 0; 
 }
 
 #instructions-title {
 	color: var(--color-5);
 	display: inline;
-	font-size: clamp(1.5rem, 10vw, 1.75rem);
+	font-size: clamp(1.25rem, 5vw, 1.75rem);
 }
 
 .instructions-number {
 	color: var(--color-5);
 	font-size: 1.75rem;
 	text-align: center;
-	padding-right: 1rem;
+	padding-right: 1.25rem;
 }
 
 .instructions-text {
 	color: var(--color-primary-text);
-	padding: 0.5rem;
-	font-size: clamp(1rem, 10vw, 1.25rem);
-	text-wrap: nowrap;
+	font-size: 1.1rem;
+	padding: 0.75rem 0;
 }
 
 #door-row {
 	display: flex;
 	flex-wrap: nowrap;
 	text-align: center;
-	margin: 2.5rem 0;
+	margin: 3.5rem 0;
 }
 
 .door-frame {
 	cursor: pointer;
-	width: clamp(5rem, 22.5vw, 15rem);
-	max-height: 75vh;
+	width: clamp(100px, 25vw, 250px);
 	padding: 0 0.5rem;
 	text-align: center;
 }
@@ -91,31 +89,31 @@ body {
 #start {
 	background-color: var(--color-5);
 	color: var(--color-3);
-	font-size: clamp(1rem, 10vw, 1.5rem);
+	font-size: clamp(1rem, 5vw, 1.25rem);
 	text-align: center;
 	width: fit-content;
 	border: none;
 	border-radius: 0.5rem;
-	padding: 1.25rem 1.75rem;
-	margin: 1.5rem auto;
+	padding: 1rem 1.5rem;
+	margin: 3.5rem auto;
 	cursor: pointer;
 }
 
 #start:hover {
 	outline-style: solid;
-	outline-color: #3a0ca3;
+	outline-color: var(--color-5);
 	outline-offset: 0.2rem;
 	outline-width: 0.2rem;
 }
 
 #score-row {
 	color: var(--color-primary-text);
-	font-size: clamp(1.25rem, 10vw, 1.5rem);
 	text-align: center;
 	display: flex;
 	justify-content: center;
 	margin-top: 2.5rem;
-	width: 80%;
+	width: 100%;
+	max-width: 1024px;
 }
 
 #score-row div {
@@ -124,12 +122,11 @@ body {
 	padding: 1.5rem;
 	border-radius: 0.5rem;
 	text-wrap: nowrap;
-	min-width: 40%;
 	flex: 1 1;
 }
 
 #score-row p.score-total {
-	font-size: clamp(1.5rem, 10vw, 2rem);
+	font-size: 1.75rem;
 	color: var(--color-5);
 }
 
@@ -137,4 +134,52 @@ body {
 	color: var(--color-primary-text-muted);
 	background-color: var(--color-4);
 	padding: 1.75rem;
+}
+
+/* Tablet+ Resolution */
+@media (min-width: 768px) {
+	#instructions-title {
+		font-size: clamp(1.25rem, 5vw, 1.5rem);
+	}
+
+	.instructions-number {
+		font-size: 1.5rem;
+	}
+
+	.instructions-text {
+		font-size: 1rem;
+	}
+
+	#door-row {
+		margin: 0;
+	}
+
+
+	.door-frame {
+		width: clamp(100px, 22.5vw, 225px);
+	}
+	
+	#start {
+		font-size: 1rem;
+		margin: 2.5rem;
+	}
+	
+	#start:hover {
+		outline-style: solid;
+		outline-color: var(--color-5);
+		outline-offset: 0.2rem;
+		outline-width: 0.2rem;
+	}
+	
+	#score-row {
+		margin: 0;
+	}
+	
+	#score-row div {
+		max-width: 225px;
+	}
+	
+	#score-row p.score-total {
+		font-size: 1.5rem;
+	}
 }
