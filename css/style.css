@@ -15,6 +15,11 @@ body {
 	margin: 0;
 }
 
+a {
+	text-decoration: underline;
+	color: inherit;
+}
+
 #container {
 	background: linear-gradient(var(--color-3) 0%, var(--color-3) 30%, var(--color-4) 100%);
 	font-family: "Work Sans";
@@ -82,8 +87,13 @@ body {
 .door-frame {
 	cursor: pointer;
 	width: clamp(100px, 25vw, 250px);
-	padding: 0 0.5rem;
+	margin: 0 0.5rem;
 	text-align: center;
+}
+
+.door-frame:hover {
+	outline: 2px solid var(--color-2);
+	outline-offset: 4px;
 }
 
 #start {

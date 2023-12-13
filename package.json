@@ -1,0 +1,26 @@
+{
+  "name": "project---chore-door",
+  "version": "1.0.0",
+  "description": "Chore Door is a single-page interactive game built with JavaScript. ",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melissaveraherbst/chore-bot.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "javascript",
+    "interactive",
+    "course-project"
+  ],
+  "author": "Melissa Vera Herbst",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/melissaveraherbst/chore-bot/issues"
+  },
+  "homepage": "https://github.com/melissaveraherbst/chore-bot#readme"
+}

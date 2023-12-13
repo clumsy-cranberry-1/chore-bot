@@ -44,14 +44,21 @@ const randomChoreDoorGenerator = () => {
 };
 
 /**
- * 
  * @param {string} gameStatus
  * Updates the button's text to a relevant message based on whether the player had won or lost the game
  * Updates the scores for best score and current score
  */
+
+// document.body.addEventListener("click", party.confetti)
+
 const gameOver = (gameStatus) => {
   if (gameStatus === "win") {
-    startButton.textContent = "You win! Play again?";
+    // this function is imported via a cdn in the index.html file
+    party.confetti(document.body, {
+      count: party.variation.range(60, 100),
+      shapes: ["star", "circle", "roundedSquare"],
+      size: 1.5
+    });
     currentScore++;
     currentScoreEl.textContent = currentScore;
     if (currentScore > bestScore) {
