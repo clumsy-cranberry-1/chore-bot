@@ -17,6 +17,8 @@ This web app is based on a concept developed during a web development course and
 
 ## Screenshots
 
-![Screenshot][def]
+![screenshot_1_(iPad Pro)](https://github.com/melissaveraherbst/chore-bot/assets/84316275/b4a2ee5d-052f-4eb3-b4f6-44655a33b552)
+![screenshot_2_(iPad Pro)](https://github.com/melissaveraherbst/chore-bot/assets/84316275/fb13a5bb-92d0-4c63-864d-199e3564dccd)
 
-[def]: /assets/Screenshot_(Desktop).png
+___
+Made with 🩵 by Melissa Vera Herbst
