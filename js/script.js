@@ -59,6 +59,7 @@ const gameOver = (gameStatus) => {
       shapes: ["star", "circle", "roundedSquare"],
       size: 1.5
     });
+    startButton.textContent = "Play again!";
     currentScore++;
     currentScoreEl.textContent = currentScore;
     if (currentScore > bestScore) {

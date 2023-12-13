@@ -79,16 +79,19 @@ a {
 
 #door-row {
 	display: flex;
+	flex-direction: row;
+	gap: 1rem;
 	flex-wrap: nowrap;
-	text-align: center;
+	/* text-align: center; */
 	margin: 3.5rem 0;
 }
 
 .door-frame {
 	cursor: pointer;
-	width: clamp(100px, 25vw, 250px);
+	/* width: clamp(100px, 20vw, 220px); */
+	width: clamp(120px, 20vw, 200px);
 	margin: 0 0.5rem;
-	text-align: center;
+	/* text-align: center; */
 }
 
 .door-frame:hover {
@@ -162,11 +165,6 @@ a {
 
 	#door-row {
 		margin: 0;
-	}
-
-
-	.door-frame {
-		width: clamp(100px, 22.5vw, 225px);
 	}
 	
 	#start {
