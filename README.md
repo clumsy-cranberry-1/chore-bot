@@ -1,4 +1,8 @@
-# Chore Door
+<div align=center>
+
+# Chore Door!
+
+</div>
 
 Chore Door is a single-page interactive game built with JavaScript. The goal is to open all of the doors without running into ChoreBot. If you manage to avoid ChoreBot until you open the last door, you win the round!
 
@@ -17,8 +21,10 @@ This web app is based on a concept developed during a web development course and
 
 ## Screenshots
 
-![screenshot_1_(iPad Pro)](https://github.com/melissaveraherbst/chore-bot/assets/84316275/b4a2ee5d-052f-4eb3-b4f6-44655a33b552)
-![screenshot_2_(iPad Pro)](https://github.com/melissaveraherbst/chore-bot/assets/84316275/fb13a5bb-92d0-4c63-864d-199e3564dccd)
+<div align=center>
+<img src="https://github.com/melissaveraherbst/chore-bot/assets/84316275/b4a2ee5d-052f-4eb3-b4f6-44655a33b552" width=48% />
+<img src="https://github.com/melissaveraherbst/chore-bot/assets/84316275/fb13a5bb-92d0-4c63-864d-199e3564dccd" width=48% />
+</div>
 
-___
+---
 Made with 🩵 by Melissa Vera Herbst
