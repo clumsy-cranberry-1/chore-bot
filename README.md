@@ -1,5 +1,7 @@
 <div align=center>
 
+<img src="https://github.com/melissaveraherbst/chore-door/assets/84316275/314d5b59-c147-4918-ada1-7c0344ff5868" width=150px />
+
 # Chore Door!
 
 </div>
