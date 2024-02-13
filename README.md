@@ -1,6 +1,10 @@
 <div align=center>
 
-<img src="https://github.com/melissaveraherbst/chore-door/assets/84316275/314d5b59-c147-4918-ada1-7c0344ff5868" width=150px />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/melissaveraherbst/chore-door/assets/84316275/145f1b97-d433-40ea-8502-3bccdf3f99d7">
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/melissaveraherbst/chore-door/assets/84316275/1e5fdb4d-bd91-44d4-90e7-a4779a31f78e">
+  <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="https://github.com/melissaveraherbst/chore-door/assets/84316275/145f1b97-d433-40ea-8502-3bccdf3f99d7" width=25% >
+</picture>
 
 # Chore Door!
 
